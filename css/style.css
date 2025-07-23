@@ -1,0 +1,1634 @@
+@charset "utf-8";
+/*======================
+common
+====================== */
+
+:root {
+    --primary-white: #FDFDFD;
+    --primary-red:  #C30D23;
+    --primary-green:  #83A602;
+    --primary-yellow:  #F2B705;
+    --primary-brong:  #481D12;
+    --primary-black:  #000;
+    --primary-orange:#FC8339;
+    
+    --contentWidth: 91.4%;
+    --contentPadding: 4.2%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Inter",
+    "Klee One",
+    "Shippori Mincho B1",
+    "Allura",;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+    line-height: normal;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    color: var(--primary-green);
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+h2{
+    color: var(--primary-green);
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+
+.title__small{
+    color:var(--primary-brong);
+    text-align: center;
+    font-family: "Klee One";
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pcbr{
+    display: none;
+}
+
+.leaf{
+    width: 21.998px;
+    height: 22.001px;
+    margin: auto 0 5px 0;
+}
+
+.pcline{
+    display: none;
+}
+
+.tern{
+    cursor: pointer;
+    position: absolute;
+}
+
+
+
+
+
+@media screen and (min-width:769px) {
+    h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 4rem;
+    }
+
+    .spbr{
+        display: none;
+    }
+
+    .pcbr{
+        display: block;
+    }
+
+    .title__small{
+        font-size: 1.6rem;
+    }
+
+    .leaf{
+        width: 36.997px;
+        height: 37.002px;
+        margin: auto 0;
+    }
+
+    .tern{
+        display: none;
+    }
+}
+
+/*==========================
+slick
+==========================*/
+.slick-slider {
+    overflow: hidden;
+    margin: 0 auto 64px;
+}
+
+/* .slick-slider pc */
+@media screen and (min-width:769px) {
+    .slick-slider {        
+        padding: 0 10%;
+    }
+
+}/* pc 769px */
+
+/*======================
+header
+====================== */
+
+.header{
+    padding: 17px 7% 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo,
+.nav__logo{
+    width: 36%;
+
+}
+
+/*nav初期表示*/
+
+.nav{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 17px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: 0.4s;
+}
+
+.nav__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list{
+    margin-top: 47px;
+}
+
+.nav__item{
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 700;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+
+}
+
+.nav__item_top{
+    display: none;
+}
+
+.nav__item img{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+}
+
+.nav.active{
+    transform: translateX(0);
+}
+
+.header__btn{
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+@media screen and (min-width:769px) {
+    .header{
+        display: block;
+        padding: 27px 0 25px 0;
+        max-width: 1080px;
+        margin: 0 auto;
+
+    }
+
+    .header__logo{
+        width: 256px;
+        height: 44px;
+        display: block;
+        margin: 0 auto 23px auto;
+    }
+
+
+    
+
+    .nav__list{
+        display: flex;
+        margin: auto 0;
+        width: 686px;
+        height: 68px;
+        gap: 79px;
+        margin: 0 auto;
+    }
+
+    .nav__item{
+        display: block;
+        width: 112px;
+        text-align: center;
+        font-weight: 400;
+
+    }
+
+    .nav__item_top{
+        display: block;
+        color: var(--primary-red);
+        font-family: "Shippori Mincho B1";
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .nav__item_center{
+        color: var(--primary-black);
+        font-family: "Inter";
+        font-size: 2.4rem; 
+        margin-bottom: 8px; 
+    }
+
+   
+
+    .nav__item_bottom{
+        height: 6px;
+        background:var(--primary-red);
+
+    }
+
+    .nav__header{
+        display: none;
+    }
+
+    .nav__item img{
+        display: none;
+        margin-right: 0;
+    }
+
+    .header__btn{
+        display: none;
+    }
+}/* pc769px*/
+
+
+
+/*======================
+main
+====================== */
+
+.article__header{
+    height: 375px;
+    background-image: url(../images/Main\ visualSP.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main__space{
+    background-color:rgba(131, 166, 2, 0.90);
+    width: 42%;
+    height: 100%;
+    padding-top: 13px;
+    position: relative;
+}
+
+.main__info{
+    writing-mode:vertical-lr;
+    color:var(--primary-white);
+    font-family: "Shippori Mincho B1";
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    margin-left: 23%;
+
+}
+
+.main__info_center{
+    font-size: 2.4rem;
+    color: var(--primary-green);
+    background-color: var(--primary-white);
+    width: 43px;
+    height: 333px;
+    line-height: 43px;
+    margin:0 8px 0 8px;  
+}
+
+.logoWhite{
+    width: 85px;
+    height: 85px;  
+    position: absolute; 
+    bottom: 20px;
+    left: -13px;
+
+}
+
+/* articale header */
+
+@media screen and (min-width:769px) {
+    .article__header{
+        height: 700px;
+        background-image: url(../images/Main\ visualPC.jpg);
+    }
+
+    .main__space{
+        width: 40%;
+    }
+
+    .main__info{
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+        margin-left: 35%;
+        margin-top: 53px;
+        letter-spacing: 0.8rem;
+    
+    }
+
+    .main__info_center{
+        padding-top: 10px;
+        font-size: 4rem;
+        width: 81px;
+        height: 575px;
+        line-height: 81px;
+        margin:0 35px 0 35px;   
+    }
+
+    .logoWhite{
+        width: 270px;
+        height: 270px;
+        left: -50px; 
+        bottom: 28px;
+    
+    }
+
+}/* articale header pc*/
+
+@media screen and (min-width:1200px) {
+    .main__space{
+        width: 31%;
+    }
+
+    .logoWhite{
+        left: -30px;
+    
+    }
+}
+
+.about{
+    background-image: url(../images/SPbackgrand1.jpg);   
+    background-size: cover;
+    background-position: bottom;
+    padding: 37px 8% 72px 8%;
+    position: relative;
+}
+
+
+.about__img{
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+}
+
+.about__veg1{
+    width: 94px;
+    height: 151px;
+    background-size: 100%;
+    background-image: url(../images/veg1.png);
+    position: absolute;
+    top: 180px;
+    left: 0px;
+    
+}
+
+.about__veg2{
+    width: 102px;
+    height: 217px;
+    background-size: 100%;
+    background-image: url(../images/veg2.png);
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+.about__title{
+    margin: 20px 0 30px 0;
+}
+
+.about__text{
+    text-align: center;
+    font-family: "Klee One";
+    font-size: 1.4rem;
+    line-height: 25px;
+    margin-bottom: 12px;
+
+}
+
+.yellow{
+    background-color: var(--primary-yellow); 
+    text-decoration:none;  
+}
+
+.about__btn{
+    display: flex;
+    margin: 29px auto 0 auto;
+    padding: 0 12px;
+    width: 245px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background-image: url(../images/orange.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: "Shippori Mincho B1";
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-red);
+}
+
+.btn__img{
+    display: block;
+    width: 21px;
+    height: 21px;
+    margin: auto 0;
+}
+
+
+
+.about__btn:hover{
+    transform: scale(1.1);
+
+}
+
+.about__btn:active{
+    transform: scale(0.8);
+}
+
+
+
+
+
+.reason__title{
+    margin-top: 35px;
+    color: var(--primary-brong);
+    font-family: "Shippori Mincho B1";
+    font-size: 2.4rem;
+    font-weight: 800;    
+    text-align: center;
+}
+
+.redtext1{
+    font-size: 3rem;
+    color: var(--primary-red);
+    text-decoration:none;
+}
+
+.redtext2{
+    color: var(--primary-red);
+    font-family: "Allura";
+    font-size: 6.4rem;
+    text-decoration:none;
+    font-weight: 400;
+}
+
+.reason__item{
+    margin-bottom: 32px;
+}
+
+.reason__item_img{
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.pic1{
+    width: 206px;
+}
+
+.pic2{
+    height: 160px;
+}
+
+.pic3{
+    width: 157px;
+}
+
+.reason__item_line{
+    width: 145px;
+    height: 3px;
+    background-color: var(--primary-yellow);
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+}
+
+.reason__item_sTitle{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.reason__item_Title{
+    color: var(--primary-red);
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.reason__item_text{
+    width: 200px;
+    font-size: 1.4rem;
+    margin: 0 auto;
+
+}/* about*/
+
+@media screen and (min-width:769px) {
+
+    .about{
+        background-image: url(../images/backgrand1.jpg);
+        padding: 121px 5% 169px 5%;
+        z-index: 200;
+    }
+
+    .about__info{
+        display: flex;
+    justify-content: center;
+        margin: 0 auto;
+    }
+
+    .about__img{
+        width: 31%;
+        margin: 0 0;
+        
+    }
+
+    .about__veg1{
+        width: 251px;
+        height: 451px;
+        background-image: url(../images/veg1PC.png);
+        top: 450px;
+        left: 0px;
+        z-index: 100;
+        
+    }
+    
+    .about__veg2{
+        width: 285px;
+        height: 486px;
+        background-image: url(../images/veg2PC.png);
+        top: 400px;
+        right: 0px;
+        z-index: 100;
+    }
+
+    .about__title{
+        text-align: left;
+        margin: 0 0 35px 0;
+    }
+
+    .info__text{
+        margin-left:4%;
+    }
+    
+    .about__text{
+        text-align: left;
+        font-size: 1.8rem;
+        line-height: 40px;
+        margin-bottom: 12px;
+    }
+
+    .about__btn{
+        margin: 35px 0 0 0;
+        padding:0 18px;
+        width: 368px;
+        height: 82px;
+        line-height: 82px;
+        font-size: 3.2rem;
+        font-weight: 800;
+        position: relative;
+    }
+    
+    .btn__img{
+        width: 34px;
+        height: 34px;
+    }
+
+    .reason__title{
+        margin-top: 112px;
+        font-size: 4rem;
+    }
+    
+    .redtext1{
+        font-size: 6.4rem;
+    }
+    
+    .redtext2{
+        font-size: 12.8rem;
+    }
+
+
+    .reason__list{
+        display: flex;
+        justify-content: center;
+        gap: 8%;
+        margin: 83px auto 0 auto;
+
+    }
+
+    .reason__item{
+        margin-bottom: 32px;
+    }
+    
+    .reason__item_img{
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+    
+    .pic1{
+        width: 256px;
+    }
+    
+    .pic2{
+        height: 192px;
+    }
+    
+    .pic3{
+        width: 191px;
+    }
+    
+    .reason__item_line{
+        margin: 0 auto 26px auto;
+    }
+
+    .reason__item_sTitle{
+        font-size: 1.8rem;
+        margin-bottom: 2px;
+    }
+    
+    .reason__item_Title{
+        font-size: 3.6rem;
+    }
+    
+    .reason__item_text{
+        font-size: 1.6rem;
+    }
+
+}
+
+.trynow{
+    background-image: url(../images/Try1backgrandSP.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    padding-bottom: 105px;
+    
+}
+
+.trynow__firsttime{
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/firsttime.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--primary-red);
+    font-family: "Shippori Mincho B1";
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 120%;
+    padding: 7px 6px 9px 10px ;
+    position: absolute;
+    right: 9%;
+    top: -80px;
+    
+}
+
+.trynow__title{
+    margin-top: 20px;
+}
+
+.trynow__pcstitle{
+    display: none;
+}
+
+.trynow__spstitle{
+    color: var(--primary-brong);
+    text-align: center;
+    font-family: "Klee One";
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 12px 0 28px 0;
+}
+
+.trynow__item{
+    width: 301px;
+    height: 371px;
+    border-radius: 30px;
+    background-image: url(../images/rice.jpg);
+    background-size: cover;
+    margin: 0 auto 58px auto;
+    padding-top: 21px;
+}
+
+
+
+.trynow__item_toptext{
+    color: var(--primary-green);
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
+    width: 123px;
+    height: 32px;
+    border-radius: 6px;
+    background: var(--primary-white);
+    margin: 0 auto 20px auto;
+}
+
+.trynow__item_title{
+    color: var(--primary-brong);
+    font-family: "Shippori Mincho B1";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.trynow__item_price{
+    color: var(--primary-red);
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 3.2rem;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.trynow__item_farmer{
+    color:var(--primary-brong);
+    text-align: center;
+    font-family: "Inter";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.trynow__item_img{
+    display: block;
+    margin: 0 auto;
+}
+
+.trynow__btn{
+    display: flex;
+    margin: 73px auto 0 auto;
+    padding: 0 12px;
+    width: 245px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background-image: url(../images/orange.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: "Shippori Mincho B1";
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-red);
+}
+
+.trynow__btn:hover{
+    transform: scale(1.1);
+    
+}
+
+.trynow__btn:active{
+    transform: scale(0.8);
+}
+
+/* trynow*/
+
+@media screen and (min-width:769px) {
+    .trynow{
+        background-image: url(../images/backgrand3.jpg);
+        padding: 44px 11% 164px 11%;   
+    }
+
+    .trynow__firsttime{
+        width: 122px;
+        height: 122px;
+        font-size: 4rem;
+        line-height: 120%;
+        padding: 7px 6px 9px 10px ;
+        right: auto;
+        left: 19%;
+        top: 0px;
+        z-index: 100;
+        
+    }
+
+    .trynow__block{
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .trynow__title{
+        writing-mode:vertical-lr;
+        margin-right: 15%;
+        letter-spacing: 0.5rem;
+    }
+
+    .trynow__btitle{
+        text-align: start;
+        margin-left: 13px;
+    }
+
+    .trynow__spstitle{
+        display: none;
+    }
+
+    .trynow__pcstitle{
+        display: block;
+        color: var(--primary-brong);
+        font-family: "Klee One";
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 55px;
+    }
+
+  
+
+    .trynow__item{
+        width: 53vw;
+        height: 285px;
+        margin: 0 auto 58px auto;
+        padding-top: 48px;
+        display: flex;
+        position: relative;
+    }
+
+    .trynow__item_info{
+        margin-left: 9%;
+    }
+
+    .trynow__item_toptext{
+        font-size: 2.2rem;
+        line-height: 37px;
+        width: 137px;
+        height: 37px;
+        margin: 0 0 23px 0;
+    }
+    
+    .trynow__item_title{
+        font-size: 3rem;
+        line-height: 30px;
+        margin-bottom: 24px;
+        text-align: left;
+
+    }
+    
+    .trynow__item_price{
+        font-size: 4rem;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+    
+    .trynow__item_farmer{
+        text-align: left;
+        font-size: 1.6rem;
+    }
+    
+    .trynow__item_img{
+        width: 60%;
+        position: absolute;
+        left: 65%;
+        top: 30px;
+    }
+
+    .trynow__btn{
+        margin: 65px 0 0 auto;
+        padding:0 18px;
+        width: 368px;
+        height: 82px;
+        line-height: 82px;
+        font-size: 3.2rem;
+        font-weight: 800;
+        position: relative;
+    }
+}/* trynow PC769px*/
+
+@media screen and (min-width:1080px) {
+
+    .trynow__item_img{
+        left: 55%;
+        top: 0;
+    }
+}
+
+
+@media screen and (min-width:1920px) {
+    .trynow__firsttime{
+        right: auto;
+        left: 27%;
+        top: 0px;
+        
+    }
+}
+
+.organic{
+    background-image: url(../images/SPbackgrand1.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding:45px 12% 85px 12%;
+}
+
+.organic__title{
+    margin-bottom: 14px;
+
+}
+
+.organic__titleset{
+    display: flex;
+    justify-content:center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.redtext3{
+    color:var(--primary-red);
+    text-decoration:none;
+}
+
+.organic__text{
+    color: #000;
+    text-align: center;
+    font-family: "Klee One";
+    font-size: 1.4rem;
+    line-height: 25px;
+    margin: 0 auto 17px auto;
+}
+
+.organic__stitle{
+    margin-top: 49px;
+    color: var(--primary-green);
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 11px;
+}
+
+.organic__line{
+    color: var(--primary-yellow);
+    display: block;
+    margin: 0 auto 33px auto;
+}
+
+.organic__line.psline{
+    display: none;
+}
+
+.organic__img{
+    padding-top: 40px;
+    width: 140px;
+    height: 140px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.green{
+    background-image: url(../images/circleG.png);
+}
+
+.orange{
+    background-image: url(../images/circleO.png);
+}
+
+.red{
+    background-image: url(../images/circleR.png);
+}
+
+.block__img_title{
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom:7px;
+}
+
+.block__img_text{
+    color:var(--primary-green);
+    text-align: center;
+    font-family: "Inter";
+    font-size: 1.2rem;
+    line-height: 22px;
+    width: 115px;
+    height: 22px;
+    background: #FFF;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.or{
+    color:var(--primary-orange);
+}
+
+.re{
+    color:var(--primary-red);
+}
+
+.organic__blockone{
+    width: 140px;
+    margin: 0 auto;
+}
+
+.organic__blocktwo{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.block__text{
+    margin: 11px 0 41px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}/*organic*/
+
+
+
+@media screen and (min-width:769px) {
+    .organic{
+        background-image: url(../images/backgrand1.jpg);
+        padding:21px 7% 147px 7%;
+    }
+
+    .organic__text{
+        font-size: 1.8rem;
+        line-height: 40px;
+        margin: 0 auto 17px auto;
+    }
+
+    .organic__line.psline{
+        display: block;
+    }
+
+    .organic__stitle{
+        margin-top: 0px;
+        font-size: 3.6rem;
+    }
+    
+    .organic__line{
+        display: block;
+        margin: 0 auto ;
+    }
+
+ 
+    .stitle__set{
+        display: flex;
+        justify-content: space-between;
+        margin: 70px auto 93px auto;
+
+    }
+    .organic__line{
+        margin: auto 0;
+    }
+
+    
+}/*organic PC769px*/
+
+@media screen and (min-width:1024px) {
+
+    .organic__img{
+        padding-top: 56px;
+        width: 170px;
+        height: 170px;
+    }
+
+    .organic__blocktwo{
+        gap: 34px;
+    }
+
+    .organic__block{
+        gap: 13px;
+    }
+
+    .organic__block{
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+        margin: 0 auto;
+    }
+
+    .pcline{
+        display: block;
+    }
+
+ 
+    .organic__blocktwo{
+        gap: 10px;
+    }
+
+    
+    .block__img_title{
+        font-size: 2.6rem;
+        line-height: 1.25;
+        margin-bottom:7px;
+    }
+    
+    .block__img_text{
+        font-size: 1.4rem;
+        line-height: 26px;
+        width: 139px;
+        height: 26px;
+
+    }
+
+    .block__text{
+        margin: 28px 0 0 0;
+        text-align: center;
+        font-size: 1.6rem;
+}
+
+}/*organic PC1024px*/
+
+
+.farmers{
+    position: relative;
+}
+
+.farmers__title{
+    margin-bottom: 44px;
+}
+
+.farmers__titleset{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    margin: 0 auto;
+
+}
+
+.farmers__item{
+    margin: 0 9%;
+}
+
+
+.farmers__item_info{
+    color: var(--primary-brong);
+    text-align: center;
+    font-family: "Inter";
+    font-size: 1.2rem;
+    display: flex;
+    line-height: 24px;
+    margin-top: 20px;
+
+}
+
+.farmers__item_where{
+    width: 52px;
+    height: 24px;
+    border-radius: 26px;
+    background: var(--primary-yellow);
+    margin-right: 5px;
+    
+}
+
+.farmers__item_title{
+    color:var(--primary-green);
+    font-family: "Shippori Mincho B1";
+    font-size: 1.6rem;
+    font-weight: 700;  
+    margin-top: 14px;
+}
+
+.farmers__item_text{
+    font-size: 1.4rem;
+    margin-top: 6px;
+
+}
+
+.prev{
+    left: 10%;
+    top: 230px;
+}
+
+.next{
+    right: 10%;
+    top: 230px; 
+}
+
+/*farmers*/
+
+@media screen and (min-width:769px) {
+
+    .farmers{
+        padding: 0 19%;
+    }
+
+    .farmers__item_info{
+        font-size: 1.4rem;
+        line-height: 30px;
+        margin-top: 25px;
+    
+    }
+
+    .farmers__item{
+        margin: 0 6%;
+    }
+
+    
+
+    .farmers__item_where{
+        width: 65px;
+        height: 30px;
+        margin-right: 7px;
+        
+    }
+
+    .farmers__item_title{
+        font-size: 2rem; 
+        margin-top: 18px;
+    }
+
+    .farmers__item_text{
+        font-size: 1.6rem;
+        margin-top: 17px;
+    }
+
+    .slick-slider{
+        padding: 0;
+        margin: 0;
+    }
+
+
+}/*farmers PC769px*/
+
+@media screen and (min-width:1080px) {
+
+}/*farmers PC1080px*/
+
+.voice{
+    background-image: url(../images/SPvoicebackground.jpg);
+    background-size: cover;
+    background-position: top;
+    padding: 40px 0 70px 0;
+    position: relative;
+}
+
+.voice__wave{
+    width: 100%;
+    height: 50px;
+    background-image: url(../images/SPpaperwave.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom:-1px;
+
+}
+
+.voice__title{
+    margin-bottom: 136px;
+}
+
+.voice__titleset{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    margin: 0 auto;
+
+}
+
+.voice__item{
+    width: 307px;
+    height: 375px;
+    background-image: url(../images/rice.jpg);
+    border-radius: 10px;
+    background-size: cover;
+    margin: 0 auto 90px auto;
+    position: relative;
+    padding-top: 87px;
+}
+
+.voice__item:last-child{
+    margin-bottom: 0;
+}
+
+.voice__item_img{
+    width: 141px;
+    height: 141px;
+    display: block;
+    position: absolute;
+    left: 28%;
+    top: -70px;
+}
+
+.voice__item_title{
+    color: var(--primary-red);
+    text-align: center;
+    font-family: "Shippori Mincho B1";
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.voice__item_who{
+    color: var(--primary-brong);
+    text-align: center;
+    font-family: "Inter";
+    font-size: 1.2rem;
+    border-radius: 20px;
+    background: #FFF;
+    width: 100px;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    }
+
+.voice__item_text{
+    font-size: 1.4rem;
+    width: 252px;
+    line-height: 20px;
+    margin: 0 auto;
+
+}/*voice*/
+
+
+
+@media screen and (min-width:769px) {
+    .voice{
+        background-image: url(../images/769voicebackground.jpg);
+        padding: 40px 0 161px 0;
+
+    }
+
+    .voice__wave{
+        height: 108px;
+        background-image: url(../images/PCpaperwave.png);
+    }
+
+    .voice__title{
+        margin-bottom: 58px;
+    }
+    
+    .voice__titleset{
+        width: 597px;
+    }
+
+    .voice__item{
+        width: 64%;
+        height: 260px;
+        margin: 0 auto 30px auto;
+        padding: 14px 0 0 130px;
+    }
+
+    .voice__item_img{
+        width: 141px;
+        height: 141px;
+        left: -45px;
+        top: 39px;
+    }
+    
+    .voice__item_title{
+        text-align: left;
+        font-size: 2.4rem;
+        margin-bottom: 11px;
+    }
+    
+    .voice__item_who{
+        text-align: center;
+        font-size: 1.4rem;
+        width: 99px;
+        height: 27px;
+        line-height: 27px;
+        margin: 0 0 5px 0;
+        }
+    
+    .voice__item_text{
+        font-size: 1.6rem;
+        width: 95%;
+        line-height: normal;
+        margin: 0 0;
+    
+    }
+
+}/*voice PC769px*/
+
+@media screen and (min-width:1024px) {
+    .voice__item{
+        height: 211px;
+    }
+
+}/*voice PC1024px*/
+
+
+
+.FAQ{
+    padding: 21px 15% 66px 15%;
+    background-image: url(../images/SPbackgrand1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+
+
+.FAQ__titleset{
+    display: flex;
+    justify-content:center;
+    margin: 0 auto 30px auto;
+    gap: 10px;
+}
+
+
+
+.FAQ__item_set{
+    display: flex;
+    align-items: center;
+ 
+}
+
+.set_big{
+    color:var(--primary-yellow);
+    font-family: "Inter";
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 25px;
+    margin-right: 9px;
+    }
+
+.set__qestaion{
+    color:var(--primary-green);
+    font-family: "Shippori Mincho B1";
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.FAQ__item_line{
+    background-image: url(../images/LINE.svg);
+    width: 65vw;
+    height: 8px;
+    margin: 20px auto 20px 0;
+
+}
+
+.set__answer{
+    color:var(--primary-green);
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 1.6rem;
+}
+
+.FAQ__item_text{
+    color: var(--primary-brong);
+    font-size: 1.4rem;
+    line-height: 25px;
+    margin-top: 5px;
+
+}
+
+.left{
+    left: 5%;
+    top: 150px;
+}
+
+.right{
+    right: 5%;
+    top: 150px; 
+}
+
+.slick-slider{
+    padding: 0;
+    margin: 0;
+}/*FAQ*/
+
+
+
+@media screen and (min-width:769px) {
+
+    .FAQ{
+        padding: 0 21% 123px 21%;
+        background-image: url(../images/backgrand1.jpg);
+    }
+
+
+
+    .FAQ__titleset{
+        margin: 0 auto 40px auto;
+    }
+  
+    .FAQ__item{
+
+        margin: 0 auto 56px auto;
+    }
+
+    .FAQ__item:last-child{
+        margin-bottom: 0px;
+    }
+
+    .FAQ__item_line{
+        background-image: url(../images/FAQPCLINE.svg);
+        width: 892px;
+        margin: 14px auto 14px 0;
+    }
+    
+    .set_big{
+        font-size: 4.8rem;
+        line-height: 25px;
+        margin-right: 14px;
+        }
+    
+    .set__qestaion{
+        font-size: 2.4rem;
+    }
+    
+    .FAQ__item_text{
+        font-size: 1.6rem;
+        margin: 16px 0 0px;
+    }
+}/*FAQ PC769px*/
+
+
+.trynowbottom{
+    position: relative;
+    background-image: url(../images/Try2backgrandSP.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom:85px;
+    background-repeat: no-repeat;
+}/*trynowbottom*/
+
+
+
+@media screen and (min-width:769px) {
+    .trynowbottom{
+        background-image: url(../images/backgrand2.jpg);
+        padding:44px 11% 164px 11%;
+    }
+}
+
+.footer{
+    background: var(--primary-green);
+    height: 105px;
+    padding: 20px 94px;
+}
+
+.sns{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 139px;
+    margin: 0 auto;
+
+}
+
+.sns__item{
+    width: 39px;
+    height: 39px;
+}
+
+.copy{
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 1.4rem;
+    line-height: 30px;
+    margin-top: 4px;
+}/*footer*/
+
+@media screen and (min-width:769px) {
+    .footer{
+        height: 198px;
+        padding: 31px auto;
+    }
+    
+    .sns{
+        gap: 16px;
+        width: 209px;
+    }
+    
+    .sns__item{
+        width: 59px;
+        height: 59px;
+        margin-top: 30px;
+    }
+    
+    .copy{
+        font-size: 1.6rem;
+        margin-top: 17px;
+    }
+}/*footer PC769px*/
